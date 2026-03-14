@@ -48,7 +48,7 @@ internal class ManhuaguiParser(context: MangaLoaderContext) :
 	PagedMangaParser(context, MangaParserSource.MANHUAGUI, pageSize = 42) {
 
 	override val configKeyDomain = ConfigKey.Domain("www.manhuagui.com")
-    	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+    	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
 	val configKeyImgServer = ConfigKey.PreferredImageServer(
 		presetValues = arrayOf("us", "us2", "us3", "eu", "eu2", "eu3").associateWith { it },

@@ -37,7 +37,7 @@ internal class KomiicParser(context: MangaLoaderContext) :
     override val configKeyDomain = ConfigKey.Domain("komiic.com")
 
     // 使用桌面版 UA，降低被拦截概率
-    override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+    override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
     override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
         super.onCreateConfig(keys)
@@ -92,7 +92,7 @@ internal class KomiicParser(context: MangaLoaderContext) :
 
             val newReq = req.newBuilder()
                 .header(CommonHeaders.ACCEPT, "image/webp,image/png;q=0.9,image/jpeg,*/*;q=0.8")
-                .header(CommonHeaders.USER_AGENT, UserAgents.CHROME_LINUX)
+                .header(CommonHeaders.USER_AGENT, UserAgents.CHROME_DESKTOP)
                 .header(CommonHeaders.REFERER, referer)
                 .header(CommonHeaders.ORIGIN, "https://$domain")
                 // 不在图片请求上强行附加 Authorization，避免服务端返回 400

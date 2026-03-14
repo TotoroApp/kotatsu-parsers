@@ -26,7 +26,7 @@ internal abstract class HotComicsParser(
 	override val configKeyDomain = ConfigKey.Domain(domain)
 
 	override fun getRequestHeaders(): Headers = Headers.Builder()
-		.add(CommonHeaders.USER_AGENT, UserAgents.CHROME_LINUX)
+		.add(CommonHeaders.USER_AGENT, UserAgents.CHROME_DESKTOP)
 		.build()
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {

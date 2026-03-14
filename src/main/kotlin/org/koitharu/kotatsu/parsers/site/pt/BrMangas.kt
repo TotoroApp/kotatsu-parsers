@@ -16,7 +16,7 @@ internal class BrMangas(context: MangaLoaderContext) : PagedMangaParser(context,
 
     override val configKeyDomain = ConfigKey.Domain("www.brmangas.net")
 
-    override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+    override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
     override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
         super.onCreateConfig(keys)

@@ -22,7 +22,7 @@ internal class GocTruyenTranh(context: MangaLoaderContext) :
 		keys.add(userAgentKey)
 	}
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
 	override val availableSortOrders: Set<SortOrder> = EnumSet.of(
 		SortOrder.UPDATED,

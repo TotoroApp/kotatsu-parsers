@@ -25,7 +25,7 @@ internal class BlogTruyenVN(context: MangaLoaderContext) :
 	override val configKeyDomain: ConfigKey.Domain
 		get() = ConfigKey.Domain("blogtruyenvn.org", "blogtruyenvn.com")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)

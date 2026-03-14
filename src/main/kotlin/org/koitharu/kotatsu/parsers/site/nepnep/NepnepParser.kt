@@ -24,7 +24,7 @@ internal abstract class NepnepParser(
 
 	override val configKeyDomain = ConfigKey.Domain(domain)
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)

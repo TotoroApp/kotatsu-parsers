@@ -262,7 +262,7 @@ internal class Klz9(context: MangaLoaderContext) :
         return Headers.Builder()
             .add(CommonHeaders.X_CLIENT_TS, ts)
             .add(CommonHeaders.X_CLIENT_SIG, sig)
-            .add(CommonHeaders.USER_AGENT, UserAgents.CHROME_LINUX)
+            .add(CommonHeaders.USER_AGENT, UserAgents.CHROME_DESKTOP)
             .build()
     }
 

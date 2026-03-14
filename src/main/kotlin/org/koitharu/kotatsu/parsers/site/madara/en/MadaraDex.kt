@@ -32,7 +32,7 @@ internal class MadaraDex(context: MangaLoaderContext) :
     }
 
     override fun getRequestHeaders() = super.getRequestHeaders().newBuilder()
-        .set(CommonHeaders.USER_AGENT, UserAgents.CHROME_LINUX)
+        .set(CommonHeaders.USER_AGENT, UserAgents.CHROME_DESKTOP)
         .build()
 
     override val authUrl: String

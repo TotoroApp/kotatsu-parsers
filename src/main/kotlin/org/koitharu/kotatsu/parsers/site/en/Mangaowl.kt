@@ -28,7 +28,7 @@ internal class Mangaowl(context: MangaLoaderContext) :
 
 	override val configKeyDomain = ConfigKey.Domain("mangaowl.to")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
 
 	override val filterCapabilities: MangaListFilterCapabilities
 		get() = MangaListFilterCapabilities(

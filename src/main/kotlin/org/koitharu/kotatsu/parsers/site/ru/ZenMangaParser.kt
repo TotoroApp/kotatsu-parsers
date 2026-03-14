@@ -300,7 +300,7 @@ internal class ZenMangaParser(context: MangaLoaderContext) :
 	}
 
 	override fun getRequestHeaders() = Headers.Builder()
-		.add(CommonHeaders.USER_AGENT, UserAgents.CHROME_LINUX)
+		.add(CommonHeaders.USER_AGENT, UserAgents.CHROME_DESKTOP)
 		.build()
 
 	private fun Any?.toSafeInt(): Int {

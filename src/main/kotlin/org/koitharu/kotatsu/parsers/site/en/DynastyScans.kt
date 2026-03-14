@@ -23,7 +23,7 @@ internal class DynastyScans(context: MangaLoaderContext) :
 
 	override val configKeyDomain = ConfigKey.Domain("dynasty-scans.com")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)

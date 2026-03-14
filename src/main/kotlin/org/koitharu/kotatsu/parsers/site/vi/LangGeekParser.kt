@@ -41,7 +41,7 @@ internal class LangGeekParser(context: MangaLoaderContext):
 
 	override val configKeyDomain = ConfigKey.Domain("langgeek.net")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)

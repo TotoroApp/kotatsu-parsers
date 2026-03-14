@@ -21,7 +21,7 @@ internal class NicovideoSeigaParser(context: MangaLoaderContext) :
 
 	override val configKeyDomain: ConfigKey.Domain = ConfigKey.Domain("nicovideo.jp")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)

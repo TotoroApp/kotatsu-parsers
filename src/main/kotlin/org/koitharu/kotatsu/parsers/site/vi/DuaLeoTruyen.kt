@@ -18,7 +18,7 @@ internal class DuaLeoTruyen(context: MangaLoaderContext) :
 	override val configKeyDomain: ConfigKey.Domain
 		get() = ConfigKey.Domain("dualeotruyenky.com")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
 
 	override fun onCreateConfig(keys: MutableCollection<ConfigKey<*>>) {
 		super.onCreateConfig(keys)
@@ -144,7 +144,7 @@ internal class DuaLeoTruyen(context: MangaLoaderContext) :
 			).closeQuietly()
 		}
 
-		return doc.select(".content_view_chap img").mapIndexed { _, img ->
+		return doc.select(".content_view_chap img").map { img ->
 			val url = img.absUrl("data-original")
 			MangaPage(
 				id = generateUid(url),

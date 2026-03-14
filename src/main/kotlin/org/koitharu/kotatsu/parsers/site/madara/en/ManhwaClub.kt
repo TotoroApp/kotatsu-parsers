@@ -10,6 +10,7 @@ import org.koitharu.kotatsu.parsers.model.Manga
 import org.koitharu.kotatsu.parsers.model.MangaChapter
 import org.koitharu.kotatsu.parsers.model.MangaPage
 import org.koitharu.kotatsu.parsers.model.MangaParserSource
+import org.koitharu.kotatsu.parsers.network.CommonHeaders
 import org.koitharu.kotatsu.parsers.site.madara.MadaraParser
 import org.koitharu.kotatsu.parsers.util.attrAsRelativeUrl
 import org.koitharu.kotatsu.parsers.util.generateUid
@@ -45,8 +46,8 @@ internal class ManhwaClub(context: MangaLoaderContext) :
 	}
 
 	override fun getRequestHeaders(): Headers = super.getRequestHeaders().newBuilder()
-		.set("Referer", "https://$domain/")
-		.set("Origin", "https://$domain")
+		.set(CommonHeaders.REFERER, "https://$domain/")
+		.set(CommonHeaders.ORIGIN, "https://$domain")
 		.build()
 
 	override suspend fun getChapters(manga: Manga, doc: Document): List<MangaChapter> {
@@ -71,9 +72,7 @@ internal class ManhwaClub(context: MangaLoaderContext) :
 		}
 
 		val chaptersFromAsync = requestAsyncChapters(mangaUrl, document)
-		val chapters = if (chaptersFromAsync.isNotEmpty()) {
-			chaptersFromAsync
-		} else {
+		val chapters = chaptersFromAsync.ifEmpty {
 			parseChapterList(document.body().select(selectChapter), sourceOrderFallback = true)
 		}
 		if (chapters.isNotEmpty()) {

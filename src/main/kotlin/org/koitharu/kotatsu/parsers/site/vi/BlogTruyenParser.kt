@@ -22,7 +22,7 @@ internal class BlogTruyenParser(context: MangaLoaderContext) :
 	override val configKeyDomain: ConfigKey.Domain
 		get() = ConfigKey.Domain("blogtruyenmoi.com")
 
-	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_DESKTOP)
+	override val userAgentKey = ConfigKey.UserAgent(UserAgents.CHROME_LINUX)
 
 	override suspend fun getFavicons(): Favicons {
 		return Favicons(

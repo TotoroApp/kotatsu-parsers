@@ -10,7 +10,7 @@ env:
     D8_PATH: build/libs/plugin.jar
 
 jobs:
-    update:
+    publish:
         runs-on: ubuntu-latest
         steps:
             -   name: Checkout repository 🌏
